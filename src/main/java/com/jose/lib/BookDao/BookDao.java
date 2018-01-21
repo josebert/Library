@@ -6,9 +6,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
 
 import com.jose.lib.ModelBook.ModelBook;
-
+@Component
 public class BookDao {
 	Map<Long,ModelBook> book=new HashMap<Long, ModelBook>();
 	Map<Long,Map<Long, ModelBook>> books = new HashMap<Long, Map<Long, ModelBook>>();

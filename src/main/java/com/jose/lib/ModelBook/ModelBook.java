@@ -1,8 +1,6 @@
 package com.jose.lib.ModelBook;
 
-import org.springframework.stereotype.Component;
 
-import com.jose.lib.BookDao.BookDao;
 
 public class ModelBook {
 	private long id;
