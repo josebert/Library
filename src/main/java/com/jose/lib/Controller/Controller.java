@@ -19,7 +19,7 @@ public class Controller {
 	BookDao b;
 	
 	@GetMapping("/books")
-	List<Map<Long,Map<Long, ModelBook>>> getList(){
+	Map<Long, Map<Long, ModelBook>> getList(){
 		return b.getbooks();
 	}
 	
