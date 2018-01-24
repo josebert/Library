@@ -8,6 +8,7 @@ public class ModelBook {
 	private String author;
 //	private Date yop;
 	private int stock;
+	
 	public ModelBook(){	
 		
 //		new BookDao();

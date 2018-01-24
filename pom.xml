@@ -2,18 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jose.library</groupId>
+	<packaging>war</packaging>
 	<artifactId>Library</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Library</name>
-		<parent>
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.2.RELEASE</version>
 	</parent>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<dependencies>
 
@@ -28,15 +26,28 @@
 			</exclusions>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency>
+		<!-- <dependency> <groupId>org.apache.tomcat.embed</groupId> <artifactId>tomcat-embed-jasper</artifactId> 
+			</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.wildfly.plugins/wildfly-maven-plugin -->
+		<!-- <dependency> <groupId>org.wildfly.plugins</groupId> <artifactId>wildfly-maven-plugin</artifactId> 
+			<version>1.1.0.Final</version> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-json -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-json -->
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+<!-- 		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency> -->
+
+
+
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -53,6 +64,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- <plugin> <groupId>org.wildfly.plugins</groupId> <artifactId>wildfly-maven-plugin</artifactId> 
+				<version>1.1.0.Final</version> <configuration> <hostname>localhost</hostname> 
+				<port>9990</port> <username>jboss-local-admin</username> <password>jboss-local-admin-password</password> 
+				<jboss-home>local-jboss-home</jboss-home> <name>${project.build.finalName}.${project.packaging}</name> 
+				</configuration> <executions> Undeploy the application on clean <execution> 
+				<id>undeploy</id> <phase>clean</phase> <goals> <goal>undeploy</goal> </goals> 
+				<configuration> <ignoreMissingDeployment>true</ignoreMissingDeployment> </configuration> 
+				</execution> Deploy the application on install <execution> <id>deploy</id> 
+				<phase>install</phase> <goals> <goal>deploy</goal> </goals> </execution> 
+				</executions> </plugin> -->
 		</plugins>
 	</build>
 </project>
